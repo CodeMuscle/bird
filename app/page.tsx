@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Link as ScrollLink, Element } from 'react-scroll'
+import {AnimatedShinyTextDemo} from '@/components/demos/animated-shiny-text-demo';
+import { CoverDemo } from '@/components/demos/cover-demo';
 
 export default function Home() {
   return (
@@ -11,7 +13,7 @@ export default function Home() {
         name="top"
         className="overflow-hidden rounded-[6px] top-5 sticky md:mx-auto z-50 xl:w-4/5 2xl:w-[68%] bg-white flex items-center justify-between py-6 px-4 md:px-8 mx-6"
       >
-        <Link href="/">
+        <Link href={`/`}>
           <Image
             src={`/logo/logo.webp`}
             alt="Logo"
@@ -64,6 +66,15 @@ export default function Home() {
           </Link>
         </div>
       </Element>
+
+      <main className="md:pb-10"> 
+        <div className="md:px-10 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
+          <AnimatedShinyTextDemo />
+        </div>
+        <h1>
+          <CoverDemo />
+        </h1>
+      </main>
     </div>
   )
 }
