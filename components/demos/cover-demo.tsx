@@ -6,6 +6,7 @@ export function CoverDemo() {
     <div>
       <h1
         className="text-3xl md:text-6xl 
+        flex flex-col gap-y-3 w-fit
        font-semibold
         max-w-7xl 
         mx-auto 
